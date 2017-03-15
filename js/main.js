@@ -6,7 +6,6 @@ var currentGameID;
 function init() {
 	currentSection = $('#saludo');
 	$('#btn-saludo').click(onClickBtnSaludo);
-
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
 
@@ -68,7 +67,7 @@ function gotoSection(_identificadorDeSeccion) {
 	TweenMax.from(nextSection, 1.5, {scale: 0.2, opacity: 0, ease: Elastic.easeOut});
 	currentSection = nextSection;
 }
-//Para mostrar el historial de todos los jugadores
+
 function getHistorial() {
 	$.ajax({
 		url: 'http://test-ta.herokuapp.com/games'
