@@ -34,9 +34,9 @@
 <section id="saludo" class="visible">
 	<div class="content">
 		<div class="container">
-
-			<h1>Bienvenido a Gato Loco!</h1>
-			<button id="btn-saludo">Iniciar juego</button>
+			<img width="230px" src="img/rayas.gif" alt="">
+			<h1><strong>Bienvenido a Gato Loco!</strong></h1>
+			<button  class="btn btn-danger btn-lg" id="btn-saludo">Iniciar juego</button>
 
 		</div>
 	</div>
@@ -45,10 +45,10 @@
 <section id="nombres">
 	<div class="content">
 		<div class="container">
-			<p>Ingrese el nombre del jugador 1 <input class="form-control" type="text"></p>
-			<p>Ingrese el nombre del jugador 2 <input class="form-control" type="text"></p>
+			<p><strong>Ingrese el nombre del jugador 1 </strong><input class="form-control" type="text"></p>
+			<p><strong>Ingrese el nombre del jugador 2</strong><input class="form-control" type="text"></p>
 			<p class="text-center">
-				<button id="btn-nombres">Comenzar</button>
+				<button  class="btn btn-warning  btn-lg" id="btn-nombres">Comenzar</button>
 			</p>
 		</div>
 	</div>
@@ -58,9 +58,32 @@
 <section id="juego">
 	<div class="content">
 		<div class="container">
-			<h2>Juego</h2>
-		</div>
-	</div>
+             <div id="cuerpo">
+                    <center><h2>TRES EN RAYA</h2></center>
+                     <div id="tablero">
+                          <div class="uno" id="uno"></div>
+                          <div class="dos" id="dos"></div>
+                          <div class="tres" id="tres"></div>
+                          <div class="cuatro" id="cuatro"></div>
+                          <div class="cinco" id="cinco"></div>
+                          <div class="seis" id="seis"></div>
+                          <div class="siete" id="siete"></div>
+                          <div class="ocho" id="ocho"></div>
+                          <div class="nueve" id="nueve"></div>
+                     </div>
+                     <div id="turno">
+                         <center>
+                            <h4>Jugadores</h4>
+                         Turno de: <input type="button" name="jugador1" id="jugador1" value="Jugador 1"/><br>
+                         Turno de: <input type="button" name="jugador2" id="jugador2" value="Jugador 2"/>
+                             <div id="contador">
+                                  Iniciar Partida: <input type="button" value="A darle con todo!" id="botonIniciarJuego" >
+                             </div>
+                             </center>
+                    </div>
+             </div>
+        </div>
+     </div>
 </section>
 
 
@@ -88,6 +111,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
 <script src="js/main.js"></script>
+<script src="js/tresrayas.js"></script>
 </body>
 </html>

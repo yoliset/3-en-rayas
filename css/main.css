@@ -6,8 +6,7 @@ header
 
 section
 {
-	background: rgba(255, 0, 0, 0.3);
-	position: absolute;
+    position: absolute;
 	width:100%;
 	height:100%;
 	top:0;
@@ -15,11 +14,14 @@ section
 	display: none;
 	opacity:0;
 }
-
+.navbar-nav>li>a {
+    background-color: rgba(36, 189, 180, 0.3);
+}
 .visible
 {
 	opacity:1;
 	display: table;
+   
 }
 
 .content
@@ -29,12 +31,123 @@ section
 	vertical-align: middle;
 }
 
-
-#saludo
-{
-
-}
 #saludo h1
 {
 	margin-bottom:120px;
 }
+h3{
+    color:white;
+}
+h4{
+    color:darkblue;
+}
+#final{
+    width: 50px;
+    height: 10px;
+}
+#cuerpo{
+    width: 90%;
+    height: 90%;
+	position: absolute;
+    left:55%;
+    top: 60%;
+    transform: translate(-60%, -60%);
+    -webkit-transform: translate(-60%, -60%);
+    margin: o auto;
+    text-align: center;
+}
+#tablero{
+    margin: o auto;
+    text-align: center; 
+}
+*{
+    outline: 1px solid red;
+}
+#turno{
+    float:left;
+    border-radius:5px;
+    background-color:rgba(169, 35, 129, 0.28);
+    width:280px;
+    height: 150px; 
+}
+#tablero{
+    float:right;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5% #ccc;
+    background-color: darkgray;
+}
+div.uno{
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.dos{
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.tres{
+
+    float:left;
+    width: 100px;
+    height:100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.cuatro{
+
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.cinco{
+
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.seis{
+
+    float:left;
+    width: 100px;
+    height:100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.siete{
+
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.ocho{
+
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+div.nueve{
+
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid #333;
+}
+
+
