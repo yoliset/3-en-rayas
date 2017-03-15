@@ -109,7 +109,6 @@ function dibujarComentarios(_datos)
 }
 
 function dibujarHistorial(_datos) {
-	//console.log(_datos);
 	var lista = $('#lista-juegos');
 
 	for (var i in _datos) {
