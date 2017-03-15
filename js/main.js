@@ -6,7 +6,7 @@ var currentGameID;
 function init() {
 	currentSection = $('#saludo');
 	$('#btn-saludo').click(onClickBtnSaludo);
-	$('#btn-nombres').click(onClickBtnNombre);
+
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
 
