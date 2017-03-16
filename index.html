@@ -45,10 +45,10 @@
 <section id="nombres">
 	<div class="content">
 		<div class="container">
-			<p style="font-family:cursive;font-size:20px;"><strong>Ingrese el nombre del jugador 1 </strong><input class="form-control" type="text" id="jugador1"></p>
-			<p style="font-family:cursive;font-size:20px;"><strong>Ingrese el nombre del jugador 2</strong><input class="form-control" type="text" id="jugador2"></p>
+			<p style="font-family:cursive;font-size:20px;"><strong>Ingrese el nombre del jugador 1 </strong><input class="form-control" type="text" id="jugadoruno"></p>
+			<p style="font-family:cursive;font-size:20px;"><strong>Ingrese el nombre del jugador 2</strong><input class="form-control" type="text" id="jugadordos"></p>
 			<p class="text-center">
-				<button  onclick="validarTodo()" class="btn btn-warning  btn-lg" id="btn-nombres">Comenzar</button>
+				<button class="btn btn-warning  btn-lg" id="btn-nombres">Comenzar</button>
 			</p>
 		</div>
 	</div>
@@ -62,15 +62,23 @@
                 <div class="row col-md-12">
                      <div class="col-md-6">
                              <div id="tablero">
-                                 <div class="uno" id="uno"></div>
-                                 <div class="dos" id="dos"></div>
-                                 <div class="tres" id="tres"></div>
-                                 <div class="cuatro" id="cuatro"></div>
-                                 <div class="cinco" id="cinco"></div>
-                                 <div class="seis" id="seis"></div>
-                                 <div class="siete" id="siete"></div>
-                                 <div class="ocho" id="ocho"></div>
-                                 <div class="nueve" id="nueve"></div>
+                                  <table border='1'>
+	                                   <tr>
+		                                 <td class="uno" id="casilla00"></td>
+		                                 <td class="dos" id="casilla01"></td>
+		                                 <td class="tres" id="casilla02"></td>
+	                                   </tr>
+	                                   <tr>
+		                                 <td class="cuatro" id="casilla10"></td>
+		                                 <td class="cinco" id="casilla11"></td>
+		                                 <td class="seis" id="casilla12"></td>
+	                                   </tr>
+	                                    <tr>
+		                                 <td class="siete" id="casilla20"></td>
+		                                 <td class="ocho" id="casilla21"></td>
+		                                 <td class="nueve" id="casilla22"></td>
+	                                    </tr>
+                                   </table>
                              </div>
                      </div>
                      <div class="col-md-6">
@@ -78,11 +86,7 @@
                          <center>
                            <center><h2  class="letra2" style="font-family:pacifico;font-size:37px;"><strong>Tres en raya!</strong></h2></center>
                             <h4>Jugadores</h4>
-                         Turno de: <input id="uno"  type="button" name="jugador1"  value="Jugador 1"/><br>
-                         Turno de: <input  id="dos" type="button" name="jugador2" value="Jugador 2"/>
-                             <div id="contador">
-                                  Iniciar Partida: <input  class="dale" type="button" value="A darle con todo!" id="botonIniciarJuego" >
-                             </div>
+                                Turno de: <div style= "background-color:white; display:inline-block;" id="jugador1"></div><br>   
                         </center>
                     </div>
                      </div>
@@ -117,7 +121,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
 <script src="js/main.js"></script>
-<script src="js/nombres.js"></script>
 <script src="js/tresrayas.js"></script>
 </body>
 </html>

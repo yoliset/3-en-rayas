@@ -45,10 +45,10 @@ section
 h1{
     font-family: pacifico;
 }
-#uno{
+#jugador1{
     color: black;
 }
-#dos{
+#jugador2{
     color: black;
 }
 .dale{
@@ -92,85 +92,112 @@ h4{
     background-color:rgb(227, 23, 55);
     width:280px;
     height: 190px; 
+    box-shadow:2px 7px 55px 23px rgba(6, 2, 3, 0.55);
 }
 #tablero{
     float:right;
     border-radius: 5px;
     background-repeat: no-repeat;
     width:270px;
-    height: 270px;
+    height: 280px;
     box-shadow: 5% #ccc;
     background-color: darkgray;
+    box-shadow:2px 7px 55px 23px rgba(6, 2, 3, 0.55);
 }
-div.uno{
-    float:left;
-    width: 90px;
-    height: 90px;
+#jugador1{
+    color: black;
+    padding-left: 20px;
+    font-size: 23px;
+    font-family: cursive;
+}
+#jugador2{
+    font-family: cursive;
+    color: black;
+    padding-left: 40px;
+    font-size: 23px;
+}
+
+td.uno{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: #cbdc1a;
-    border: 1px solid #333;
 }
-div.dos{
-    float:left;
-    width: 90px;
-    height: 90px;
+td.dos{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: lightgray;
-    border: 1px solid #333;
 }
-div.tres{
-
-    float:left;
-    width: 90px;
-    height:90px;
-    background-color: rgba(23, 227, 25, 0.83);
+td.tres{
     border: 1px solid #333;
-}
-div.cuatro{
-
-    float:left;
-    width: 90px;
-    height: 90px;
-    background-color: lightgray;
-    border: 1px solid #333;
-}
-div.cinco{
-
-    float:left;
-    width: 90px;
-    height: 90px;
-    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: rgba(23, 227, 25, 0.83);
 }
-div.seis{
-
-    float:left;
-    width: 90px;
-    height:90px;
+td.cuatro{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: lightgray;
-    border: 1px solid #333;
 }
-div.siete{
-
-    float:left;
-    width: 90px;
-    height: 90px;
-    background-color:  rgba(23, 227, 25, 0.83);
+td.cinco{
     border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
+    background-color: rgba(23, 227, 25, 0.83);
 }
-div.ocho{
-
-    float:left;
-    width: 90px;
-    height: 90px;
+td.seis{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: lightgray;
-    border: 1px solid #333;
 }
-div.nueve{
 
-    float:left;
-    width: 90px;
-    height: 90px;
+td.siete{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
+    background-color: rgba(23, 227, 25, 0.83);
+}
+td.ocho{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
+    background-color: lightgray;
+}
+td.nueve{
+    border: 1px solid #333;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+    width:100px;
+    height:100px;
     background-color: #cbdc1a;
-    border: 1px solid #333;
 }
 
 

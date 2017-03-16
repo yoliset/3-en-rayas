@@ -6,6 +6,7 @@ var currentGameID;
 function init() {
 	currentSection = $('#saludo');
 	$('#btn-saludo').click(onClickBtnSaludo);
+    $('#btn-nombres').click(onClickBtnNombre);
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
 
@@ -28,9 +29,22 @@ function onClickBtnItemJuego()
 function onClickBtnSaludo() {
 	gotoSection('nombres');
 }
-
 function onClickBtnNombre() {
-	gotoSection('juego');
+	var jugador1 = $('#jugadoruno').val();
+    var jugador2 = $('#jugadordos').val();
+    if ((/^[a-zA-Z]+$/.test(jugador1)!==true)&&(/^[a-zA-Z]+$/.test(jugador2)!==true)){
+		alert('Coloca tu nombre');
+	}else{
+		var jugadorUno = $('#jugadoruno').val();
+		localStorage.setItem('jugador01', jugadorUno);
+		
+		var jugadorDos = $('#jugadordos').val();
+		localStorage.setItem('jugador02', jugadorDos);
+		
+		
+		gotoSection('juego');
+	} 
+	
 }
 
 function onClickBtnHistorial(evt) {
