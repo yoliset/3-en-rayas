@@ -6,34 +6,27 @@ function Tablero(){
 		for(var i=0; i<3; i++){
 			this.casillas[i] = new Array(3);
 			}
-		this.detectarLineaDiagonal1 = function(){
+		this.detectarLineaDiagonal1 = function(casillas){
 				if(this.casillas[0][0] != undefined && this.casillas[0][0] == this.casillas[1][1] && this.casillas[1][1] == this.casillas[2][2]){
 				return true;}		
 			}
-		this.detectarLineaDiagonal2 = function(){
+		this.detectarLineaDiagonal2 = function(casillas){
 				if(this.casillas[0][2] != undefined && this.casillas[0][2] == this.casillas[1][1] && this.casillas[1][1] == this.casillas[2][0]){
 				return true;}		
 			}
-		this.detectarLineaHorizontal = function(){
+		this.detectarLineaHorizontal = function(casillas){
 			for(var fila=0; fila<3; fila++){
 				if(this.casillas[fila][0] !=undefined && this.casillas[fila][0] == this.casillas[fila][1] && this.casillas[fila][1] == this.casillas[fila][2]){
 				return true;}
 				}		
 			}
-		this.detectarLineaVertical = function(){
+		this.detectarLineaVertical = function(casillas){
 			for(var col=0; col<3; col++){
 				if(this.casillas[0][col] !=undefined && this.casillas[0][col] == this.casillas[1][col] && this.casillas[1][col] == this.casillas[2][col])
 				{return true;}
 				}
 			}
-		this.numMovimientos = 1;
-			this.continuarPartida = function(){
-			if(this.detectarLineaDiagonal1() || this.detectarLineaDiagonal2() || this.detectarLineaHorizontal() || this.detectarLineaVertical()){
-                alert("Enhorabuena, ganaste ");
-				this.numMovimientos = 1;
-				this.empezar();
-				}
-			}
+        
 		this.empezar = function(){
 			for(a=0; a<3; a++){
 				for(b=0; b<3; b++){
@@ -54,14 +47,15 @@ function Tablero(){
 					if(this.numMovimientos % 2 !== 0){
 					document.getElementById("casilla" + fila + col).innerHTML = "X";
 					this.casillas[fila][col] = "X";
-                    var jugador = $('#jugador1').html(gamer1);
+                    var jugador = $('#jugador1').html('Turno de: '+gamer1);
+                    this.continuarPartida(gamer1);
 					}
     
 					else if(this.numMovimientos % 2 == 0){
 					document.getElementById("casilla" + fila + col).innerHTML = "O";
 					this.casillas[fila][col] = "O"; 
-                    var jugador = $('#jugador1').html(gamer2);
-    
+                    var jugador = $('#jugador1').html('Turno de: '+gamer2);
+                        this.continuarPartida(gamer2);
 					}
 					//incrementamos el número de movimientos
 					this.numMovimientos++;
@@ -70,12 +64,21 @@ function Tablero(){
 								this.continuarPartida();
 							}
 							else{
-								alert("perdiste");
+								var jugador = $('#jugador1').html("Empate");
 								this.empezar();
 												 }
 					}
 				}
+        this.numMovimientos = 1;
+			this.continuarPartida = function(casillas){
+			if(this.detectarLineaDiagonal1() || this.detectarLineaDiagonal2() || this.detectarLineaHorizontal() || this.detectarLineaVertical()){
+                var ganador = $('#jugador1').html('Gano: '+casillas);
+				this.numMovimientos = 1;
+				this.empezar();
+				}
+			}
 		}
+
 		//obtenemos las celdas de la tabla
 		var celdas = document.getElementsByTagName("td");
 

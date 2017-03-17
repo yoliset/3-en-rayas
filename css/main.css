@@ -21,6 +21,10 @@ section
     color: #333;
     background-color: rgba(39, 197, 190, 0.27);
 }
+#btn-history{
+    margin-top: 29px;
+  
+}
 .visible
 {
 	opacity:1;
@@ -47,10 +51,14 @@ h1{
 }
 #jugador1{
     color: black;
-}
-#jugador2{
+    border-radius: 15px;
+    padding-right: 14px;
     color: black;
+    padding-left: 20px;
+    font-size: 23px;
+    font-family: cursive;
 }
+
 .dale{
     color: black;
 }
@@ -104,18 +112,7 @@ h4{
     background-color: darkgray;
     box-shadow:2px 7px 55px 23px rgba(6, 2, 3, 0.55);
 }
-#jugador1{
-    color: black;
-    padding-left: 20px;
-    font-size: 23px;
-    font-family: cursive;
-}
-#jugador2{
-    font-family: cursive;
-    color: black;
-    padding-left: 40px;
-    font-size: 23px;
-}
+
 
 td.uno{
     border: 1px solid #333;

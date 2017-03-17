@@ -8,12 +8,15 @@ function init() {
 	$('#btn-saludo').click(onClickBtnSaludo);
     $('#btn-nombres').click(onClickBtnNombre);
 	$('#btn-historial').click(onClickBtnHistorial);
+	$('#btn-history').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
+	$('#btn-inicio').click(onClickBtnInicio);
 
 	$('#lista-juegos').on('click', 'button', onClickBtnItemJuego);
 
 
 	TweenMax.from($('#saludo h1'), 1, {marginBottom: '0px', ease: Elastic.easeOut});
+	TweenMax.from($('.uno '), 1, {marginBottom: '0px', ease: Elastic.easeOut});
 }
 
 function onClickBtnItemJuego()
@@ -25,9 +28,11 @@ function onClickBtnItemJuego()
 	currentGameID = idGame;
 	//getSingleGame(idGame);
 }
-
 function onClickBtnSaludo() {
 	gotoSection('nombres');
+}
+function onClickBtnInicio() {
+	gotoSection('saludo');
 }
 function onClickBtnNombre() {
 	var jugador1 = $('#jugadoruno').val();
@@ -46,7 +51,6 @@ function onClickBtnNombre() {
 	} 
 	
 }
-
 function onClickBtnHistorial(evt) {
 	evt.preventDefault();
 	gotoSection('historial');
@@ -56,9 +60,6 @@ function onClickBtnComentar()
 {
 	enviarComentario(currentGameID, $('#name').val(), $('#content').val());
 }
-
-
-
 
 function enviarComentario(_idGame, _name, _content)
 {
@@ -131,4 +132,18 @@ function dibujarHistorial(_datos) {
 		var html = '<li data-idgame="'+ _datos[i].id +'" class="list-group-item">' + _datos[i].winner_player + ' le gano a '+ _datos[i].loser_player +' en ' + _datos[i].number_of_turns_to_win + ' movimientos <button class="btn">Comentar</button></li>';
 		lista.append(html);
 	}
+}
+
+function enviarJuego(_win, _loser, _movimientosWin){
+	$.ajax({
+		url:'https://test-ta.herokuapp.com/games',
+		type:'POST',
+		data:{game: {
+    winner_player: _win,
+    loser_player: _loser,
+    number_of_turns_to_win: _movimientosWin
+  }}
+	}).done(function(_data){
+		console.log(_data);
+	});
 }
