@@ -36,6 +36,8 @@ function Tablero(){
 				}
 			}
 		}
+        var moviuno = 0;
+        var movidos = 0;
         this.marcarMovimiento = function(fila,col){
 				//si no ha termniando la partida
 		 var gamer1 =localStorage.getItem('jugador01');
@@ -49,6 +51,9 @@ function Tablero(){
 					this.casillas[fila][col] = "X";
                     var jugador = $('#jugador1').html('Turno de: '+gamer1);
                     this.continuarPartida(gamer1);
+                    moviuno ++;
+                        $("#movimiento1").html('Movimiento de '+gamer1+' : '+moviuno);
+                        
 					}
     
 					else if(this.numMovimientos % 2 == 0){
@@ -56,6 +61,8 @@ function Tablero(){
 					this.casillas[fila][col] = "O"; 
                     var jugador = $('#jugador1').html('Turno de: '+gamer2);
                         this.continuarPartida(gamer2);
+                    movidos ++;
+                        $("#movimiento2").html('Movimiento de '+gamer2+' : '+movidos);
 					}
 					//incrementamos el número de movimientos
 					this.numMovimientos++;
