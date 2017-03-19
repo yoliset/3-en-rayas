@@ -61,9 +61,12 @@ function Tablero(){
 					this.casillas[fila][col] = "O"; 
                     var jugador = $('#jugador1').html('Turno de: '+gamer2);
                         this.continuarPartida(gamer2);
+                        //Para obtener mis movimientos
                     movidos ++;
                         $("#movimiento2").html('Movimiento de '+gamer2+' : '+movidos);
 					}
+                        
+                    
 					//incrementamos el número de movimientos
 					this.numMovimientos++;
 					//comprobar si sigue al partida
@@ -82,8 +85,19 @@ function Tablero(){
                 var ganador = $('#jugador1').html('Gano: '+casillas);
 				this.numMovimientos = 1;
 				this.empezar();
+                //para guardar en localStorage mi ganador
+                if(this.continuarPartida() == gamer1.val){
+                localStorage.setItem('ganador',casillas);
+                localStorage.setItem('loser',gamer2);
+                localStorage.setItem('movimiento',moviuno);
+            }else if(this.continuarPartida() == gamer2.val){
+                localStorage.setItem('ganador',casillas);
+                localStorage.setItem('loser',gamer1);
+                localStorage.setItem('movimiento',movidos);
+                  }
 				}
 			}
+           
 		}
 
 		//obtenemos las celdas de la tabla
